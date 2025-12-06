@@ -2,12 +2,15 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import { Tabs } from 'expo-router'
 import { Ionicons } from '@expo/vector-icons';
+import useTheme from '../../hooks/useTheme';
 
 const TabsLayout = () => {
+  const {colors} = useTheme();
+  
   return (
     <Tabs screenOptions={{
-      tabBarActiveTintColor:'skyblue',
-      tabBarStyle:{backgroundColor:'#1F2933',
+      tabBarActiveTintColor:colors.primary,
+      tabBarStyle:{backgroundColor:colors.surface,
         borderTopWidth:2,
         borderTopColor:'#3B4A5A'
       },
